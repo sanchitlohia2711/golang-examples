@@ -10,9 +10,9 @@ func newStockData(stockValue int) *stockData {
 		stockValue: stockValue,
 	}
 }
-
 func (s *stockData) updateStockValue(newStockValue int) {
 	s.stockValue = newStockValue
+	s.notifyObserver()
 }
 func (s *stockData) registerObserver(o observer) {
 	s.observerList = append(s.observerList, o)
