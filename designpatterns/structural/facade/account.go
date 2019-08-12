@@ -3,18 +3,18 @@ package main
 import "fmt"
 
 type account struct {
-	id string
+	name string
 }
 
-func newAccount() *account {
+func newAccount(accountName string) *account {
 	return &account{
-		id: "abc",
+		name: accountName,
 	}
 }
 
-func (a *account) checkAccount(accountID string) error {
-	if a.id != accountID {
-		return fmt.Errorf("AccountId is incorrect")
+func (a *account) checkAccount(accountName string) error {
+	if a.name != accountName {
+		return fmt.Errorf("Account Name is incorrect")
 	}
 	fmt.Println("Account Verified")
 	return nil

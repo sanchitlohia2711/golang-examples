@@ -7,7 +7,7 @@ import (
 
 func main() {
 	fmt.Println()
-	walletFacade := newWalletFacade(1234)
+	walletFacade := newWalletFacade("abc", 1234)
 	fmt.Println()
 
 	err := walletFacade.addMoneyToWallet("abc", 1234, 10)
@@ -16,7 +16,7 @@ func main() {
 	}
 
 	fmt.Println()
-	err = walletFacade.deductMoneyFromWallet("abc", 1234, 5)
+	err = walletFacade.deductMoneyFromWallet("ab", 1234, 5)
 	if err != nil {
 		log.Fatalf("Error: %s\n", err.Error())
 	}

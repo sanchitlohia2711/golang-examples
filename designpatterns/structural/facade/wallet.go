@@ -8,7 +8,7 @@ type wallet struct {
 
 func newWallet() *wallet {
 	return &wallet{
-		balance: 10,
+		balance: 0,
 	}
 }
 

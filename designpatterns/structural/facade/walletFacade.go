@@ -9,10 +9,10 @@ type walletFacade struct {
 	notification *notification
 }
 
-func newWalletFacade(code int) *walletFacade {
+func newWalletFacade(accountName string, code int) *walletFacade {
 	fmt.Println("Starting create account")
 	walletFacacde := &walletFacade{
-		account:      newAccount(),
+		account:      newAccount(accountName),
 		securityCode: newSecurityCode(code),
 		wallet:       newWallet(),
 		notification: &notification{},
@@ -21,9 +21,9 @@ func newWalletFacade(code int) *walletFacade {
 	return walletFacacde
 }
 
-func (w *walletFacade) addMoneyToWallet(accountID string, securityCode int, amount int) error {
+func (w *walletFacade) addMoneyToWallet(accountName string, securityCode int, amount int) error {
 	fmt.Println("Starting add money to wallet")
-	err := w.account.checkAccount(accountID)
+	err := w.account.checkAccount(accountName)
 	if err != nil {
 		return err
 	}
@@ -36,9 +36,9 @@ func (w *walletFacade) addMoneyToWallet(accountID string, securityCode int, amou
 	return nil
 }
 
-func (w *walletFacade) deductMoneyFromWallet(accountID string, securityCode int, amount int) error {
+func (w *walletFacade) deductMoneyFromWallet(accountName string, securityCode int, amount int) error {
 	fmt.Println("Starting debit money from wallet")
-	err := w.account.checkAccount(accountID)
+	err := w.account.checkAccount(accountName)
 	if err != nil {
 		return err
 	}
