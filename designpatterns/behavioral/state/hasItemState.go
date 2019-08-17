@@ -2,29 +2,29 @@ package main
 
 import "fmt"
 
-type initState struct {
+type hasItemState struct {
 	vendingMachine *vendingMachine
 }
 
-func (i *initState) requestItem() error {
+func (i *hasItemState) requestItem() error {
 	if i.vendingMachine.itemCount == 0 {
 		i.vendingMachine.setState(i.vendingMachine.noItem)
 		return fmt.Errorf("No item present")
 	}
-	fmt.Printf("Init: item requestd")
+	fmt.Printf("Item requestd\n")
 	i.vendingMachine.setState(i.vendingMachine.itemRequested)
 	return nil
 }
 
-func (i *initState) addItem(count int) error {
+func (i *hasItemState) addItem(count int) error {
 	fmt.Printf("%d items added\n", count)
-	i.vendingMachine.itemCount = i.vendingMachine.itemCount + count
+	i.vendingMachine.incrementItemCount(count)
 	return nil
 }
 
-func (i *initState) insertMoney(money int) error {
+func (i *hasItemState) insertMoney(money int) error {
 	return fmt.Errorf("Please select item first")
 }
-func (i *initState) dispenseItem() error {
+func (i *hasItemState) dispenseItem() error {
 	return fmt.Errorf("Please select item first")
 }

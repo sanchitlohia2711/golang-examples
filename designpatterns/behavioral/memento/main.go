@@ -11,6 +11,8 @@ func main() {
 	editor := &editor{
 		state: "A",
 	}
+
+	
 	fmt.Printf("Editor Current State: %s\n", editor.getState())
 	caretaker.addMemento(editor.createMemento())
 

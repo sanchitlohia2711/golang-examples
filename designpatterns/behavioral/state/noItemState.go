@@ -11,8 +11,8 @@ func (i *noItemState) requestItem() error {
 }
 
 func (i *noItemState) addItem(count int) error {
-	i.vendingMachine.itemCount = i.vendingMachine.itemCount + count
-	i.vendingMachine.setState(i.vendingMachine.initState)
+	i.vendingMachine.incrementItemCount(count)
+	i.vendingMachine.setState(i.vendingMachine.hasItem)
 	return nil
 }
 

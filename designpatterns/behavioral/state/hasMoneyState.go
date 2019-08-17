@@ -23,7 +23,7 @@ func (i *hasMoneyState) dispenseItem() error {
 	if i.vendingMachine.itemCount == 0 {
 		i.vendingMachine.setState(i.vendingMachine.noItem)
 	} else {
-		i.vendingMachine.setState(i.vendingMachine.initState)
+		i.vendingMachine.setState(i.vendingMachine.hasItem)
 	}
 	return nil
 }
