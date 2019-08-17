@@ -9,7 +9,7 @@
             "type": "go",
             "request": "launch",
             "mode": "auto",
-            "program": "/Users/sanchitlohia/go/src/golang-examples/designpatterns/observer/main.go",
+            "program": "/Users/sanchitlohia/go/src/golang-examples/designpatterns/behavioral/memento/main.go",
             "env": {},
             "args": []
         }
