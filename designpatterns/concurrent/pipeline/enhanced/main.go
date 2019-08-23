@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"sync"
 	"time"
 )
 
@@ -55,39 +54,10 @@ func endPipeline(done chan struct{}, in <-chan string) {
 	return
 }
 
-func merge(cs ...<-chan string) <-chan string {
-	var wg sync.WaitGroup
-	out := make(chan string)
-
-	output := func(c <-chan string) {
-		for n := range c {
-			out <- n
-		}
-		wg.Done()
-	}
-	wg.Add(len(cs))
-	for _, c := range cs {
-		go output(c)
-	}
-
-	go func() {
-		wg.Wait()
-		close(out)
-	}()
-	return out
-}
-
 func main() {
 	chars := []string{"a", "b", "c"}
 	done := make(chan struct{})
-
-	in := startPipeline(done, chars)
-
-	c1 := append(done, in)
-	c2 := append(done, in)
-
-	c3 := merge(c1, c2)
-	endPipeline(done, c3)
+	endPipeline(done, append(done, startPipeline(done, chars)))
 
 	// fmt.Println(<-done)
 	// fmt.Println(<-done)

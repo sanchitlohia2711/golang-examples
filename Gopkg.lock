@@ -2,6 +2,18 @@
 
 
 [[projects]]
+  branch = "master"
+  digest = "1:0ef07197f29c21ea0d5e3d0f686b5c7bed2e2c69cb8b4be6228d83ee9e4ed5ae"
+  name = "github.com/afex/hystrix-go"
+  packages = [
+    "hystrix",
+    "hystrix/metric_collector",
+    "hystrix/rolling",
+  ]
+  pruneopts = ""
+  revision = "fa1af6a1f4f56e0e50d427fe901cd604d8c6fb8a"
+
+[[projects]]
   digest = "1:e35353e6b5c1a1350832f2f5ea87f1d42d491ce519bc6e2c65d5dd6d020e2a01"
   name = "github.com/gin-contrib/sse"
   packages = ["."]
@@ -197,8 +209,10 @@
   analyzer-name = "dep"
   analyzer-version = 1
   input-imports = [
+    "github.com/afex/hystrix-go/hystrix",
     "github.com/gin-gonic/gin",
     "github.com/go-redis/redis",
+    "github.com/golang/protobuf/proto",
     "github.com/newrelic/go-agent",
     "github.com/newrelic/go-agent/_integrations/nrgin/v1",
     "github.com/tsenart/vegeta/lib",

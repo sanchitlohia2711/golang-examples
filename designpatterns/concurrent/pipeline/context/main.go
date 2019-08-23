@@ -1,12 +1,12 @@
 package main
 
 import (
+	"context"
 	"fmt"
-	"sync"
 	"time"
 )
 
-func append(done chan struct{}, in <-chan string) <-chan string {
+func append(ctx context.Context, in <-chan string) <-chan string {
 	out := make(chan string)
 	go func() {
 		defer close(out)
@@ -14,7 +14,7 @@ func append(done chan struct{}, in <-chan string) <-chan string {
 			fmt.Printf("append %s\n", s)
 			select {
 			case out <- s + s[len(s)-1:]:
-			case <-done:
+			case <-ctx.Done():
 				fmt.Println("Done is closed in append")
 				return
 			}
@@ -24,7 +24,7 @@ func append(done chan struct{}, in <-chan string) <-chan string {
 	return out
 }
 
-func startPipeline(done chan struct{}, chars []string) <-chan string {
+func startPipeline(ctx context.Context, chars []string) <-chan string {
 	out := make(chan string)
 	go func() {
 		defer close(out)
@@ -32,7 +32,7 @@ func startPipeline(done chan struct{}, chars []string) <-chan string {
 			fmt.Printf("startPipiline %s\n", s)
 			select {
 			case out <- s + s:
-			case <-done:
+			case <-ctx.Done():
 				fmt.Println("Done is closed in startPipeline")
 				return
 			}
@@ -43,11 +43,11 @@ func startPipeline(done chan struct{}, chars []string) <-chan string {
 	return out
 }
 
-func endPipeline(done chan struct{}, in <-chan string) {
-	defer close(done)
+func endPipeline(ctx context.Context, cancel func(), in <-chan string) {
+	defer cancel()
 	fmt.Printf("endPipeline %s\n", <-in)
-	fmt.Printf("endPipeline %s\n", <-in)
-	fmt.Printf("endPipeline %s\n", <-in)
+	//fmt.Printf("endPipeline %s\n", <-in)
+	//fmt.Printf("endPipeline %s\n", <-in)
 
 	//for s := range in {
 	//	fmt.Println(s)
@@ -55,39 +55,11 @@ func endPipeline(done chan struct{}, in <-chan string) {
 	return
 }
 
-func merge(cs ...<-chan string) <-chan string {
-	var wg sync.WaitGroup
-	out := make(chan string)
-
-	output := func(c <-chan string) {
-		for n := range c {
-			out <- n
-		}
-		wg.Done()
-	}
-	wg.Add(len(cs))
-	for _, c := range cs {
-		go output(c)
-	}
-
-	go func() {
-		wg.Wait()
-		close(out)
-	}()
-	return out
-}
-
 func main() {
 	chars := []string{"a", "b", "c"}
-	done := make(chan struct{})
-
-	in := startPipeline(done, chars)
-
-	c1 := append(done, in)
-	c2 := append(done, in)
-
-	c3 := merge(c1, c2)
-	endPipeline(done, c3)
+	c := context.Background()
+	ctx, cancel := context.WithCancel(c)
+	endPipeline(ctx, cancel, append(ctx, startPipeline(ctx, chars)))
 
 	// fmt.Println(<-done)
 	// fmt.Println(<-done)
