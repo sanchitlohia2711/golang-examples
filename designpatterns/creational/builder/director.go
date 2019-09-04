@@ -1,18 +1,22 @@
 package main
 
 type director struct {
-	builder *builder
+	builder iBuilder
 }
 
-func newDirector(b *builder) *director {
+func newDirector(b iBuilder) *director {
 	return &director{
 		builder: b,
 	}
 }
 
+func (d *director) setBuilder(b iBuilder) {
+	d.builder = b
+}
+
 func (d *director) buildHouse() house {
-	d.builder.setDoorType("someDoorType")
-	d.builder.setWindowType("someWindowType")
-	d.builder.setNumFloor(2)
+	d.builder.setDoorType()
+	d.builder.setWindowType()
+	d.builder.setNumFloor()
 	return d.builder.getHouse()
 }
