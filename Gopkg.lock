@@ -2,6 +2,22 @@
 
 
 [[projects]]
+  digest = "1:e9846ece10d1701db72a5add936bb9edc81353cdccb19be27078ca32f6c3f5d8"
+  name = "github.com/DataDog/datadog-go"
+  packages = ["statsd"]
+  pruneopts = ""
+  revision = "8a13fa761f51039f900738876f2837198fba804f"
+  version = "v2.2.0"
+
+[[projects]]
+  digest = "1:439bfb51db599cd80766736b93b3d10e9314361197ada0b1209a51627a00ccd5"
+  name = "github.com/PuerkitoBio/goquery"
+  packages = ["."]
+  pruneopts = ""
+  revision = "2d2796f41742ece03e8086188fa4db16a3a0b458"
+  version = "v1.5.0"
+
+[[projects]]
   branch = "master"
   digest = "1:0ef07197f29c21ea0d5e3d0f686b5c7bed2e2c69cb8b4be6228d83ee9e4ed5ae"
   name = "github.com/afex/hystrix-go"
@@ -12,6 +28,46 @@
   ]
   pruneopts = ""
   revision = "fa1af6a1f4f56e0e50d427fe901cd604d8c6fb8a"
+
+[[projects]]
+  digest = "1:99bb098027ff0bffd40e1c95c7bf34726d1e422b4d5e421f14c5f96d28b9035b"
+  name = "github.com/andybalholm/cascadia"
+  packages = ["."]
+  pruneopts = ""
+  revision = "b69f6c92dfc187ebfe3914df716c2647a3af0ba0"
+  version = "v1.1.0"
+
+[[projects]]
+  digest = "1:d78fa0e01d9a6f71a38b8cdf5184a6b3e69220938689a70e30542b912bf527b1"
+  name = "github.com/antchfx/htmlquery"
+  packages = ["."]
+  pruneopts = ""
+  revision = "b8d36292614567671decfe6f96c7b8c432d3249b"
+  version = "v1.0.0"
+
+[[projects]]
+  digest = "1:7cea8ca358577b8c075b3284785a0d3f570f14356e016e6f053e9ed6527a7dcf"
+  name = "github.com/antchfx/xmlquery"
+  packages = ["."]
+  pruneopts = ""
+  revision = "8bd964f5eef5a1f086493b5941caae5d3daf76f1"
+  version = "v1.0.0"
+
+[[projects]]
+  digest = "1:77691d6857ee0f52fb49266d04d01deecbe9b192ebeb4472f8be76b9bb80de86"
+  name = "github.com/antchfx/xpath"
+  packages = ["."]
+  pruneopts = ""
+  revision = "668f6670d6ae1409249cc09be7907702e7f8152f"
+  version = "1.1.0"
+
+[[projects]]
+  digest = "1:141635a36d65611d06a05ec1d17be950e386426b6540169fe7c9476df41f6493"
+  name = "github.com/cpuguy83/go-md2man"
+  packages = ["md2man"]
+  pruneopts = ""
+  revision = "7762f7e404f8416dfa1d9bb6a8c192aa9acb4d19"
+  version = "v1.0.10"
 
 [[projects]]
   digest = "1:e35353e6b5c1a1350832f2f5ea87f1d42d491ce519bc6e2c65d5dd6d020e2a01"
@@ -51,6 +107,35 @@
   version = "v6.15.2"
 
 [[projects]]
+  digest = "1:9ab1b1c637d7c8f49e39d8538a650d7eb2137b076790cff69d160823b505964c"
+  name = "github.com/gobwas/glob"
+  packages = [
+    ".",
+    "compiler",
+    "match",
+    "syntax",
+    "syntax/ast",
+    "syntax/lexer",
+    "util/runes",
+    "util/strings",
+  ]
+  pruneopts = ""
+  revision = "5ccd90ef52e1e632236f7326478d4faa74f99438"
+  version = "v0.2.3"
+
+[[projects]]
+  digest = "1:a3fa9b2e4999433a3a4a434b30df857767b051e642ece5db0d9c6d41f6fab41f"
+  name = "github.com/gocolly/colly"
+  packages = [
+    ".",
+    "debug",
+    "storage",
+  ]
+  pruneopts = ""
+  revision = "ca2f07cb3c921eec1b4993f4ff6f00f593dc3af0"
+  version = "v1.2.0"
+
+[[projects]]
   digest = "1:b852d2b62be24e445fcdbad9ce3015b44c207815d631230dfce3f14e7803f5bf"
   name = "github.com/golang/protobuf"
   packages = ["proto"]
@@ -73,6 +158,14 @@
   pruneopts = ""
   revision = "27518f6661eba504be5a7a9a9f6d9460d892ade3"
   version = "v1.1.7"
+
+[[projects]]
+  digest = "1:717859f53ed0a55fab7284704ecaac4b0d292f4caca5ceaa2afd512be49189ea"
+  name = "github.com/kennygrant/sanitize"
+  packages = ["."]
+  pruneopts = ""
+  revision = "06ec0d0dbcd497d01e5189b16f5263f712e61a8e"
+  version = "v1.2.4"
 
 [[projects]]
   branch = "master"
@@ -128,6 +221,38 @@
   version = "v2.10.0"
 
 [[projects]]
+  digest = "1:87dffed114a34c714199c74e15c04ecb1c332c669f63f722220a5e4e6eb2ef52"
+  name = "github.com/russross/blackfriday"
+  packages = ["."]
+  pruneopts = ""
+  revision = "d3b5b032dc8e8927d31a5071b56e14c89f045135"
+  version = "v2.0.1"
+
+[[projects]]
+  branch = "master"
+  digest = "1:d1d064197983378d52b9cb2329f58b050ead44fc541aed670587e0131033f9da"
+  name = "github.com/saintfish/chardet"
+  packages = ["."]
+  pruneopts = ""
+  revision = "3af4cd4741ca4f3eb0c407c034571a6fb0ea529c"
+
+[[projects]]
+  digest = "1:42a59e0ee70c485f96de4a30f86f88266d50b50f918053dec798f0cb2b4b7a88"
+  name = "github.com/shurcooL/sanitized_anchor_name"
+  packages = ["."]
+  pruneopts = ""
+  revision = "7bfe4c7ecddb3666a94b053b422cdd8f5aaa3615"
+  version = "v1.0.0"
+
+[[projects]]
+  digest = "1:ad4550aa21146baad6f8a8303657e73c83d6c306e1ea39f121ce2dcf7f4549a2"
+  name = "github.com/temoto/robotstxt"
+  packages = ["."]
+  pruneopts = ""
+  revision = "3f668f68d41cf91350a4148f4fcb6720f1472428"
+  version = "v1.1.1"
+
+[[projects]]
   digest = "1:9faa19c3f647e607200889453948c28953499aae75f6c7cacf293a5e2187e54a"
   name = "github.com/tsenart/vegeta"
   packages = ["lib"]
@@ -144,10 +269,22 @@
   version = "v1.1.7"
 
 [[projects]]
+  digest = "1:c6b7dd6b1f602f71a9522d03a65150ace6550839b71c543efa5686d56686c913"
+  name = "github.com/urfave/cli"
+  packages = ["."]
+  pruneopts = ""
+  revision = "bfe2e925cfb6d44b40ad3a779165ea7e8aff9212"
+  version = "v1.22.0"
+
+[[projects]]
   branch = "master"
   digest = "1:955694a7c42527d7fb188505a22f10b3e158c6c2cf31fe64b1e62c9ab7b18401"
   name = "golang.org/x/net"
   packages = [
+    "context",
+    "html",
+    "html/atom",
+    "html/charset",
     "http/httpguts",
     "http2",
     "http2/hpack",
@@ -170,6 +307,16 @@
   packages = [
     "collate",
     "collate/build",
+    "encoding",
+    "encoding/charmap",
+    "encoding/htmlindex",
+    "encoding/internal",
+    "encoding/internal/identifier",
+    "encoding/japanese",
+    "encoding/korean",
+    "encoding/simplifiedchinese",
+    "encoding/traditionalchinese",
+    "encoding/unicode",
     "internal/colltab",
     "internal/gen",
     "internal/language",
@@ -177,7 +324,9 @@
     "internal/tag",
     "internal/triegen",
     "internal/ucd",
+    "internal/utf8internal",
     "language",
+    "runes",
     "secure/bidirule",
     "transform",
     "unicode/bidi",
@@ -188,6 +337,22 @@
   pruneopts = ""
   revision = "342b2e1fbaa52c93f31447ad2c6abc048c63e475"
   version = "v0.3.2"
+
+[[projects]]
+  digest = "1:702a3d272e930e37f4978392f69473eede3f5eea31a345c129085f899580c2cb"
+  name = "google.golang.org/appengine"
+  packages = [
+    "internal",
+    "internal/base",
+    "internal/datastore",
+    "internal/log",
+    "internal/remote_api",
+    "internal/urlfetch",
+    "urlfetch",
+  ]
+  pruneopts = ""
+  revision = "bddb1f54ecfd64b1350fd2dd897fa11d426632bc"
+  version = "v1.6.4"
 
 [[projects]]
   digest = "1:dd549e360e5a8f982a28c2bcbe667307ceffe538ed9afc7c965524f1ac285b3f"
@@ -209,13 +374,16 @@
   analyzer-name = "dep"
   analyzer-version = 1
   input-imports = [
+    "github.com/DataDog/datadog-go/statsd",
     "github.com/afex/hystrix-go/hystrix",
     "github.com/gin-gonic/gin",
     "github.com/go-redis/redis",
+    "github.com/gocolly/colly",
     "github.com/golang/protobuf/proto",
     "github.com/newrelic/go-agent",
     "github.com/newrelic/go-agent/_integrations/nrgin/v1",
     "github.com/tsenart/vegeta/lib",
+    "github.com/urfave/cli",
   ]
   solver-name = "gps-cdcl"
   solver-version = 1

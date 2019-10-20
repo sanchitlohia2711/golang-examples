@@ -9,7 +9,7 @@
             "type": "go",
             "request": "launch",
             "mode": "auto",
-            "program": "/Users/sanchitlohia/go/src/golang-examples/main.go",
+            "program": "/Users/slohia/go/src/github.com/golang-examples/main.go",
             "env": {},
             "args": []
         },
@@ -18,7 +18,7 @@
             "type": "go",
             "request": "launch",
             "mode": "auto",
-            "program": "/Users/sanchitlohia/go/src/golang-examples/designpatterns/concurrent/pipeline/main.go",
+            "program": "/Users/slohia/go/src/github.com/golang-examples/articles/files/large/scanner/main.go",
             "env": {},
             "args": []
         }
