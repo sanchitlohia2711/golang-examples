@@ -16,6 +16,7 @@ func newWalletFacade(accountName string, code int) *walletFacade {
 		securityCode: newSecurityCode(code),
 		wallet:       newWallet(),
 		notification: &notification{},
+		ledger:       &ledger{},
 	}
 	fmt.Println("Account created")
 	return walletFacacde

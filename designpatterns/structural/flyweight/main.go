@@ -6,15 +6,15 @@ func main() {
 	game := newGame()
 
 	//Add Terrorist
-	game.addTerrorist(TerroristRedDressType)
-	game.addTerrorist(TerroristBlackDressType)
-	game.addTerrorist(TerroristRedDressType)
-	game.addTerrorist(TerroristRedDressType)
+	game.addTerrorist(TerroristDressType)
+	game.addTerrorist(TerroristDressType)
+	game.addTerrorist(TerroristDressType)
+	game.addTerrorist(TerroristDressType)
 
 	//Add CounterTerrorist
-	game.addCounterTerrorist(CounterTerrroristGrayDressType)
-	game.addCounterTerrorist(CounterTerrroristGreenDressType)
-	game.addCounterTerrorist(CounterTerrroristGrayDressType)
+	game.addCounterTerrorist(CounterTerrroristDressType)
+	game.addCounterTerrorist(CounterTerrroristDressType)
+	game.addCounterTerrorist(CounterTerrroristDressType)
 
 	dressFactoryInstance := getDressFactorySingleInstance()
 

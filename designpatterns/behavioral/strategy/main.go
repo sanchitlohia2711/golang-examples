@@ -14,4 +14,9 @@ func main() {
 
 	cache.add("d", "4")
 
+	fifo := &fifo{}
+	cache.setEvictionAlgo(fifo)
+
+	cache.add("e", "5")
+
 }

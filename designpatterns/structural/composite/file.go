@@ -6,6 +6,10 @@ type file struct {
 	name string
 }
 
-func (f *file) print(indentation string) {
-	fmt.Println(indentation + f.name)
+func (f *file) search(keyword string) {
+	fmt.Printf("Searching for keyword %s in file %s\n", keyword, f.name)
+}
+
+func (f *file) getName() string {
+	return f.name
 }

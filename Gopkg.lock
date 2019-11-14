@@ -107,6 +107,14 @@
   version = "v6.15.2"
 
 [[projects]]
+  digest = "1:e692d16fdfbddb94e9e4886aaf6c08bdbae5cb4ac80651445de9181b371c6e46"
+  name = "github.com/go-sql-driver/mysql"
+  packages = ["."]
+  pruneopts = ""
+  revision = "72cd26f257d44c1114970e19afddcd812016007e"
+  version = "v1.4.1"
+
+[[projects]]
   digest = "1:9ab1b1c637d7c8f49e39d8538a650d7eb2137b076790cff69d160823b505964c"
   name = "github.com/gobwas/glob"
   packages = [
@@ -342,6 +350,7 @@
   digest = "1:702a3d272e930e37f4978392f69473eede3f5eea31a345c129085f899580c2cb"
   name = "google.golang.org/appengine"
   packages = [
+    "cloudsql",
     "internal",
     "internal/base",
     "internal/datastore",
@@ -378,6 +387,7 @@
     "github.com/afex/hystrix-go/hystrix",
     "github.com/gin-gonic/gin",
     "github.com/go-redis/redis",
+    "github.com/go-sql-driver/mysql",
     "github.com/gocolly/colly",
     "github.com/golang/protobuf/proto",
     "github.com/newrelic/go-agent",

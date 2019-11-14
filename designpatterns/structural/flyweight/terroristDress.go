@@ -7,3 +7,7 @@ type terroristDress struct {
 func (t *terroristDress) getColor() string {
 	return t.color
 }
+
+func newTerroristDress() *terroristDress {
+	return &terroristDress{color: "red"}
+}

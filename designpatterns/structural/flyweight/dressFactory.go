@@ -3,14 +3,10 @@ package main
 import "fmt"
 
 const (
-	//TerroristRedDressType terrorist red dress type
-	TerroristRedDressType = "tRedDress"
-	//TerroristBlackDressType terrorist black dress type
-	TerroristBlackDressType = "tBlackDress"
-	//CounterTerrroristGreenDressType terrorist green dress type
-	CounterTerrroristGreenDressType = "ctGreenDress"
-	//CounterTerrroristGrayDressType terrorist gray dress type
-	CounterTerrroristGrayDressType = "ctGrayDress"
+	//TerroristDressType terrorist dress type
+	TerroristDressType = "tDress"
+	//CounterTerrroristDressType terrorist dress type
+	CounterTerrroristDressType = "ctDress"
 )
 
 var (
@@ -28,28 +24,12 @@ func (d *dressFactory) getDressByType(dressType string) (dress, error) {
 		return d.dressMap[dressType], nil
 	}
 
-	if dressType == TerroristRedDressType {
-		d.dressMap[dressType] = &terroristDress{
-			color: "red",
-		}
+	if dressType == TerroristDressType {
+		d.dressMap[dressType] = newTerroristDress()
 		return d.dressMap[dressType], nil
 	}
-	if dressType == TerroristBlackDressType {
-		d.dressMap[dressType] = &terroristDress{
-			color: "black",
-		}
-		return d.dressMap[dressType], nil
-	}
-	if dressType == CounterTerrroristGreenDressType {
-		d.dressMap[dressType] = &counterTerroristDress{
-			color: "green",
-		}
-		return d.dressMap[dressType], nil
-	}
-	if dressType == CounterTerrroristGrayDressType {
-		d.dressMap[dressType] = &counterTerroristDress{
-			color: "gray",
-		}
+	if dressType == CounterTerrroristDressType {
+		d.dressMap[dressType] = newCounterTerroristDress()
 		return d.dressMap[dressType], nil
 	}
 

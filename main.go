@@ -1,9 +1,15 @@
 package main
 
 import (
-	"github.com/golang-examples/articles/crawler"
+	"go-sql-driver/mysql"
+
+	"github.com/go-sql-driver/mysql"
+
+	"github.com/golang-examples/articles/mysql/gosqldriver"
 )
 
 func main() {
-	crawler.Start()
+	gosqldriver.Initialize()
+	_ := mysql.Config
+
 }
