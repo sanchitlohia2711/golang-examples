@@ -10,9 +10,8 @@ func main() {
 		mediator: stationManager,
 	}
 
-	passengerTrain.arrival()
-	goodsTrain.arrival()
+	passengerTrain.requestArrival()
+	goodsTrain.requestArrival()
 
 	passengerTrain.departure()
-	goodsTrain.arrival()
 }

@@ -5,7 +5,7 @@ import "fmt"
 type ledger struct {
 }
 
-func (s *securityCode) makeEntry(accountName, txnType string, amount int) error {
-	fmt.Println("Make ledger entry Verified")
-	return nil
+func (s *ledger) makeEntry(accountID, txnType string, amount int) {
+	fmt.Printf("Make ledger entry for accountId %s with txnType %s for amount %d\n", accountID, txnType, amount)
+	return
 }

@@ -7,9 +7,10 @@ type mac struct {
 }
 
 func (m *mac) print() {
+	fmt.Println("Print request for mac")
 	m.printer.printFile()
 }
 
-func (m *mac) display() {
-	fmt.Println("Display on a mac monitor")
+func (m *mac) setPrinter(p printer) {
+	m.printer = p
 }

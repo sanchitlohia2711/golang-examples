@@ -5,6 +5,7 @@ import "sync"
 type stationManager struct {
 	isPlatformFree bool
 	lock           *sync.Mutex
+	trainQueue     []train
 }
 
 func newStationManger() *stationManager {
@@ -14,13 +15,14 @@ func newStationManger() *stationManager {
 	}
 }
 
-func (s *stationManager) canLand() bool {
+func (s *stationManager) canLand(t train) bool {
 	s.lock.Lock()
 	defer s.lock.Unlock()
 	if s.isPlatformFree {
 		s.isPlatformFree = false
 		return true
 	}
+	s.trainQueue = append(s.trainQueue, t)
 	return false
 }
 
@@ -29,5 +31,10 @@ func (s *stationManager) notifyFree() {
 	defer s.lock.Unlock()
 	if !s.isPlatformFree {
 		s.isPlatformFree = true
+	}
+	if len(s.trainQueue) > 0 {
+		firstTrainInQueue := s.trainQueue[0]
+		s.trainQueue = s.trainQueue[1:]
+		firstTrainInQueue.permitArrival()
 	}
 }

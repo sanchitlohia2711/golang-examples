@@ -1,6 +1,7 @@
 package main
 
 type visitor interface {
-	visitAlpha(element)
-	visitBeta(element)
+	visitForSquare(*square)
+	visitForCircle(*circle)
+	visitForrectangle(*rectangle)
 }

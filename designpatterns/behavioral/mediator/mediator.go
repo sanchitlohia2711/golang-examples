@@ -1,6 +1,6 @@
 package main
 
 type mediator interface {
-	canLand() bool
+	canLand(train) bool
 	notifyFree()
 }

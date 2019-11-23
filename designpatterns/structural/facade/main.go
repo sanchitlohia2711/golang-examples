@@ -16,7 +16,7 @@ func main() {
 	}
 
 	fmt.Println()
-	err = walletFacade.deductMoneyFromWallet("ab", 1234, 5)
+	err = walletFacade.deductMoneyFromWallet("abc", 1234, 5)
 	if err != nil {
 		log.Fatalf("Error: %s\n", err.Error())
 	}

@@ -1,29 +1,29 @@
 package main
 
+import "fmt"
+
 func main() {
 
-	hpPrinter := &hpPrinter{}
-	epsonPrinter := &epsonPrinter{}
+	hpPrinter := &hp{}
+	epsonPrinter := &epson{}
 
-	macComputer1 := &mac{
-		printer: hpPrinter,
-	}
+	macComputer := &mac{}
 
-	macComputer1.print()
+	macComputer.setPrinter(hpPrinter)
+	macComputer.print()
+	fmt.Println()
 
-	macComputer2 := &mac{
-		printer: epsonPrinter,
-	}
+	macComputer.setPrinter(epsonPrinter)
+	macComputer.print()
+	fmt.Println()
 
-	macComputer2.print()
+	winComputer := &windows{}
 
-	winComputer1 := &mac{
-		printer: hpPrinter,
-	}
-	winComputer1.print()
+	winComputer.setPrinter(hpPrinter)
+	winComputer.print()
+	fmt.Println()
 
-	winComputer2 := &mac{
-		printer: epsonPrinter,
-	}
-	winComputer2.print()
+	winComputer.setPrinter(epsonPrinter)
+	winComputer.print()
+	fmt.Println()
 }

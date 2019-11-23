@@ -3,10 +3,20 @@ package main
 import "fmt"
 
 type reception struct {
-	nextDepartment department
+	next department
 }
 
 func (r *reception) execute(p *patient) {
+	if p.registrationDone {
+		fmt.Println("Patient registration already done")
+		r.next.execute(p)
+		return
+	}
 	fmt.Println("Reception registering patient")
-	r.nextDepartment.execute(p)
+	p.registrationDone = true
+	r.next.execute(p)
+}
+
+func (r *reception) setNext(next department) {
+	r.next = next
 }

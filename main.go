@@ -1,15 +1,10 @@
 package main
 
 import (
-	"go-sql-driver/mysql"
-
-	"github.com/go-sql-driver/mysql"
-
-	"github.com/golang-examples/articles/mysql/gosqldriver"
+	"github.com/golang-examples/articles/logger"
 )
 
 func main() {
-	gosqldriver.Initialize()
-	_ := mysql.Config
+	logger.Initialize()
 
 }

@@ -2,9 +2,9 @@ package main
 
 import "fmt"
 
-type epsonPrinter struct {
+type epson struct {
 }
 
-func (p *epsonPrinter) printFile() {
+func (p *epson) printFile() {
 	fmt.Println("Printing by a EPSON Printer")
 }

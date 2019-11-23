@@ -1,11 +1,22 @@
 package main
 
+import "fmt"
+
 func main() {
-	alpha := &alpha{}
-	beta := &beta{}
+	square := &square{side: 2}
+	circle := &circle{radius: 3}
+	rectangle := &rectangle{l: 2, b: 3}
 
-	concreteVisitor := &concreteVisitor{}
+	areaCalculator := &areaCalculator{}
 
-	alpha.visit(concreteVisitor)
-	beta.visit(concreteVisitor)
+	square.accept(areaCalculator)
+	circle.accept(areaCalculator)
+	rectangle.accept(areaCalculator)
+
+	fmt.Println()
+	middleCoordinates := &middleCoordinates{}
+	square.accept(middleCoordinates)
+	circle.accept(middleCoordinates)
+	rectangle.accept(middleCoordinates)
 }
+

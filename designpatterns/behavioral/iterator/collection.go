@@ -1,5 +1,5 @@
 package main
 
-type iterableCollection interface {
+type collection interface {
 	createIterator() iterator
 }

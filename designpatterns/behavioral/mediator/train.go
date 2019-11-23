@@ -1,6 +1,7 @@
 package main
 
 type train interface {
-	arrival() bool
-	departurel()
+	requestArrival()
+	departure()
+	permitArrival()
 }

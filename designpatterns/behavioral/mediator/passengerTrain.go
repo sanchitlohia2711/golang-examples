@@ -6,8 +6,8 @@ type passengerTrain struct {
 	mediator mediator
 }
 
-func (g *passengerTrain) arrival() {
-	if g.mediator.canLand() {
+func (g *passengerTrain) requestArrival() {
+	if g.mediator.canLand(g) {
 		fmt.Println("PassengerTrain: Landing")
 	} else {
 		fmt.Println("PassengerTrain: Waiting")
@@ -15,6 +15,10 @@ func (g *passengerTrain) arrival() {
 }
 
 func (g *passengerTrain) departure() {
-	g.mediator.notifyFree()
 	fmt.Println("PassengerTrain: Leaving")
+	g.mediator.notifyFree()
+}
+
+func (g *passengerTrain) permitArrival() {
+	fmt.Println("PassengerTrain: Arrival Permitted. Landing")
 }
