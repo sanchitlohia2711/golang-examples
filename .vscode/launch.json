@@ -18,7 +18,7 @@
             "type": "go",
             "request": "launch",
             "mode": "auto",
-            "program": "/Users/slohia/go/src/github.com/golang-examples/articles/logger/main.go",
+            "program": "/Users/slohia/go/src/github.com/golang-examples/articles/datastructure/linkedlist/singly/custom/main.go",
             "env": {},
             "args": []
         }

@@ -2,8 +2,14 @@ package main
 
 import (
 	"fmt"
+	"log"
+	"strconv"
 	"sync"
 )
+
+type iPoolObject interface {
+	getID() string //This is any id which can be used to compare two different pool objects
+}
 
 type pool struct {
 	idle   []iPoolObject
@@ -66,4 +72,40 @@ func (p *pool) remove(target iPoolObject) error {
 		}
 	}
 	return fmt.Errorf("Targe pool object doesn't belong to the pool")
+}
+
+type connection struct {
+	id string
+}
+
+func (c *connection) getID() string {
+	return c.id
+}
+
+func main() {
+
+	connections := make([]iPoolObject, 0)
+
+	for i := 0; i < 3; i++ {
+		c := &connection{id: strconv.Itoa(i)}
+		connections = append(connections, c)
+	}
+
+	pool, err := initPool(connections)
+	if err != nil {
+		log.Fatalf("Init Pool Error: %s", err)
+	}
+
+	conn1, err := pool.loan()
+	if err != nil {
+		log.Fatalf("Pool Loan Error: %s", err)
+	}
+
+	conn2, err := pool.loan()
+	if err != nil {
+		log.Fatalf("Pool Loan Error: %s", err)
+	}
+
+	pool.receive(conn1)
+	pool.receive(conn2)
 }

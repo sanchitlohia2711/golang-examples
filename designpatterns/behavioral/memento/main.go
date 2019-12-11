@@ -8,26 +8,25 @@ func main() {
 		mementoArray: make([]*memento, 0),
 	}
 
-	editor := &editor{
+	originator := &originator{
 		state: "A",
 	}
 
-	
-	fmt.Printf("Editor Current State: %s\n", editor.getState())
-	caretaker.addMemento(editor.createMemento())
+	fmt.Printf("Originator Current State: %s\n", originator.getState())
+	caretaker.addMemento(originator.createMemento())
 
-	editor.setState("B")
-	fmt.Printf("Editor Current State: %s\n", editor.getState())
-	caretaker.addMemento(editor.createMemento())
+	originator.setState("B")
+	fmt.Printf("Originator Current State: %s\n", originator.getState())
+	caretaker.addMemento(originator.createMemento())
 
-	editor.setState("C")
-	fmt.Printf("Editor Current State: %s\n", editor.getState())
-	caretaker.addMemento(editor.createMemento())
+	originator.setState("C")
+	fmt.Printf("Originator Current State: %s\n", originator.getState())
+	caretaker.addMemento(originator.createMemento())
 
-	editor.restoreState(caretaker.getMenento(1))
-	fmt.Printf("Restored to State: %s\n", editor.getState())
+	originator.restorememento(caretaker.getMenento(1))
+	fmt.Printf("Restored to State: %s\n", originator.getState())
 
-	editor.restoreState(caretaker.getMenento(0))
-	fmt.Printf("Restored to State: %s\n", editor.getState())
+	originator.restorememento(caretaker.getMenento(0))
+	fmt.Printf("Restored to State: %s\n", originator.getState())
 
 }

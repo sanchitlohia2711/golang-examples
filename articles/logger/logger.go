@@ -12,6 +12,7 @@ import (
 
 var (
 	logger *logrus.Logger
+	
 )
 
 //Fields logrus fields
@@ -48,9 +49,11 @@ func refresh() {
 }
 
 func timer(t time.Duration) {
-	for _ = range time.Tick(t) {
-		refresh()
+	for range time.Tick(t) {
+		//refresh()
+		writer.Write([]byte(""))
 	}
+
 }
 
 //GetLogger : get the logger
