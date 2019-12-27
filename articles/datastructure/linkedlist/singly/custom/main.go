@@ -16,7 +16,7 @@ func initList() *singleList {
 	return &singleList{}
 }
 
-func (s *singleList) addFront(name string) {
+func (s *singleList) AddFront(name string) {
 	ele := &ele{
 		name: name,
 	}
@@ -30,7 +30,7 @@ func (s *singleList) addFront(name string) {
 	return
 }
 
-func (s *singleList) addBack(name string) {
+func (s *singleList) AddBack(name string) {
 	ele := &ele{
 		name: name,
 	}
@@ -47,14 +47,7 @@ func (s *singleList) addBack(name string) {
 	return
 }
 
-func (s *singleList) front() (string, error) {
-	if s.head == nil {
-		return "", fmt.Errorf("Single List is empty")
-	}
-	return s.head.name, nil
-}
-
-func (s *singleList) removeFront() error {
+func (s *singleList) RemoveFront() error {
 	if s.head == nil {
 		return fmt.Errorf("List is empty")
 	}
@@ -62,10 +55,9 @@ func (s *singleList) removeFront() error {
 	s.len--
 	return nil
 }
-
-func (s *singleList) removeBack() error {
+func (s *singleList) RemoveBack() error {
 	if s.head == nil {
-		return fmt.Errorf("RemoveBack: List is empty")
+		return fmt.Errorf("removeBack: List is empty")
 	}
 	var prev *ele
 	current := s.head
@@ -82,11 +74,18 @@ func (s *singleList) removeBack() error {
 	return nil
 }
 
-func (s *singleList) size() int {
+func (s *singleList) Front() (string, error) {
+	if s.head == nil {
+		return "", fmt.Errorf("Single List is empty")
+	}
+	return s.head.name, nil
+}
+
+func (s *singleList) Size() int {
 	return s.len
 }
 
-func (s *singleList) traverse() error {
+func (s *singleList) Traverse() error {
 	if s.head == nil {
 		return fmt.Errorf("TranverseError: List is empty")
 	}
@@ -102,44 +101,45 @@ func main() {
 	singleList := initList()
 
 	fmt.Printf("AddFront: A\n")
-	singleList.addFront("A")
+	singleList.AddFront("A")
 	fmt.Printf("AddFront: B\n")
-	singleList.addFront("B")
+	singleList.AddFront("B")
 	fmt.Printf("AddBack: C\n")
-	singleList.addBack("C")
+	singleList.AddBack("C")
+	fmt.Printf("Size: %d\n", singleList.Size())
 
-	err := singleList.traverse()
+	err := singleList.Traverse()
 	if err != nil {
 		fmt.Println(err.Error())
 	}
 
 	fmt.Printf("RemoveFront\n")
-	err = singleList.removeFront()
+	err = singleList.RemoveFront()
 	if err != nil {
-		fmt.Println(err.Error())
+		fmt.Printf("RemoveFront Error: %s\n", err.Error())
 	}
 
 	fmt.Printf("RemoveBack\n")
-	err = singleList.removeBack()
-	if err != nil {
-		fmt.Println(err.Error())
-	}
-
-	fmt.Printf("RemoveBack\n")
-	err = singleList.removeBack()
-	if err != nil {
-		fmt.Println(err.Error())
-	}
-
-	fmt.Printf("RemoveBack\n")
-	err = singleList.removeBack()
+	err = singleList.RemoveBack()
 	if err != nil {
 		fmt.Printf("RemoveBack Error: %s\n", err.Error())
 	}
 
-	err = singleList.traverse()
+	fmt.Printf("RemoveBack\n")
+	err = singleList.RemoveBack()
+	if err != nil {
+		fmt.Printf("RemoveBack Error: %s\n", err.Error())
+	}
+
+	fmt.Printf("RemoveBack\n")
+	err = singleList.RemoveBack()
+	if err != nil {
+		fmt.Printf("RemoveBack Error: %s\n", err.Error())
+	}
+
+	err = singleList.Traverse()
 	if err != nil {
 		fmt.Println(err.Error())
 	}
-	fmt.Printf("Size: %d\n", singleList.size())
+	fmt.Printf("Size: %d\n", singleList.Size())
 }

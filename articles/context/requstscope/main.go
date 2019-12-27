@@ -31,6 +31,5 @@ func inejctMsgID(next http.Handler) http.Handler {
 		ctx := context.WithValue(r.Context(), "msgId", msgID)
 		req := r.WithContext(ctx)
 		next.ServeHTTP(w, req)
-		
 	})
 }

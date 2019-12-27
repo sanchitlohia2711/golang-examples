@@ -1,12 +1,11 @@
 package main
 
 import (
-	"githubn.com/golang-examples/articles/datastructure/set/mapsett"
+	"github.com/golang-examples/articles/datastructure/heap/pack"
 )
 
 func main() {
-	logger.Initialize()
 
-	mapsett.Init()
+	pack.Init()
 
 }
