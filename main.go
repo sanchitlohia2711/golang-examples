@@ -1,11 +1,11 @@
 package main
 
 import (
-	"github.com/golang-examples/articles/datastructure/heap/pack"
+	"github.com/golang-examples/articles/types/time/dob/ages"
 )
 
 func main() {
 
-	pack.Init()
+	ages.Find()
 
 }

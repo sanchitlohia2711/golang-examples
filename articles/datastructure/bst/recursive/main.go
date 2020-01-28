@@ -12,10 +12,6 @@ type bst struct {
 	root *bstnode
 }
 
-func initList() *bst {
-	return &bst{}
-}
-
 func (b *bst) reset() {
 	b.root = nil
 }
@@ -90,7 +86,7 @@ func main() {
 		bst.insert(val)
 	}
 
-	fmt.Println("Printing Inorder")
+	fmt.Printf("Printing Inorder:\n")
 	bst.inorder()
 
 	bst.reset()
@@ -99,9 +95,10 @@ func main() {
 		bst.insert(val)
 	}
 
-	fmt.Println("Printing Inorder")
+	fmt.Printf("\nPrinting Inorder:\n")
 	bst.inorder()
 
+	fmt.Printf("\nFinding Values:\n")
 	err := bst.find(2)
 	if err != nil {
 		fmt.Printf("Value %d Not Found\n", 2)

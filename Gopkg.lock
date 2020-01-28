@@ -62,12 +62,28 @@
   version = "1.1.0"
 
 [[projects]]
+  branch = "master"
+  digest = "1:d6b876ce25f96e3a17e01ebab523965a4f8e49fee5641850b414ac1fd28e6569"
+  name = "github.com/bearbin/go-age"
+  packages = ["."]
+  pruneopts = ""
+  revision = "316d0c1e7cd1ecf68e4313ac739dc8a714f63934"
+
+[[projects]]
   digest = "1:141635a36d65611d06a05ec1d17be950e386426b6540169fe7c9476df41f6493"
   name = "github.com/cpuguy83/go-md2man"
   packages = ["md2man"]
   pruneopts = ""
   revision = "7762f7e404f8416dfa1d9bb6a8c192aa9acb4d19"
   version = "v1.0.10"
+
+[[projects]]
+  digest = "1:aaeffbff5bd24654cb4c190ed75d6c7b57b4f5d6741914c1a7a6bb7447e756c5"
+  name = "github.com/deckarep/golang-set"
+  packages = ["."]
+  pruneopts = ""
+  revision = "cbaa98ba5575e67703b32b4b19f73c91f3c4159e"
+  version = "v1.7.1"
 
 [[projects]]
   digest = "1:e35353e6b5c1a1350832f2f5ea87f1d42d491ce519bc6e2c65d5dd6d020e2a01"
@@ -277,14 +293,6 @@
   version = "v0.8.1"
 
 [[projects]]
-  digest = "1:17c45c7e1dd9a5225559e9e50936c2916e57bb79d21e9f5064acb16ec11e449a"
-  name = "github.com/revel/config"
-  packages = ["."]
-  pruneopts = ""
-  revision = "a81c4105c36841d27e529f875b6062da7b8f986c"
-  version = "v0.21.0"
-
-[[projects]]
   digest = "1:463cf5034cda51cdb4ce56d317c1c1343be898c2bb5e576666394d53f4ba28cd"
   name = "github.com/rifflock/lfshook"
   packages = ["."]
@@ -457,6 +465,8 @@
   input-imports = [
     "github.com/DataDog/datadog-go/statsd",
     "github.com/afex/hystrix-go/hystrix",
+    "github.com/bearbin/go-age",
+    "github.com/deckarep/golang-set",
     "github.com/gin-gonic/gin",
     "github.com/go-redis/redis",
     "github.com/go-sql-driver/mysql",
@@ -467,7 +477,6 @@
     "github.com/lestrrat/go-file-rotatelogs",
     "github.com/newrelic/go-agent",
     "github.com/newrelic/go-agent/_integrations/nrgin/v1",
-    "github.com/revel/config",
     "github.com/rifflock/lfshook",
     "github.com/sirupsen/logrus",
     "github.com/tsenart/vegeta/lib",
