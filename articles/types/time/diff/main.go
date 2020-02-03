@@ -6,9 +6,9 @@ import (
 )
 
 func main() {
-	now := time.Now()
+	currentTime := time.Now()
 	oldTime := time.Date(2020, 1, 2, 0, 0, 0, 0, time.UTC)
-	diff := now.Sub(oldTime)
+	diff := currentTime.Sub(oldTime)
 
 	//In hours
 	fmt.Printf("Hours: %f\n", diff.Hours())
@@ -22,8 +22,4 @@ func main() {
 	//In nanoseconds
 	fmt.Printf("Nanoseconds: %d\n", diff.Nanoseconds())
 
-	//time Since
-	fmt.Println(time.Since(now.Add(-time.Hour * 1)))
-
-	fmt.Println(time.Until(now.Add(time.Hour * 1)))
 }

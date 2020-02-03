@@ -4,7 +4,7 @@ import "fmt"
 
 type computer interface {
 	print()
-	setPrinter()
+	setPrinter(printer)
 }
 
 type mac struct {
