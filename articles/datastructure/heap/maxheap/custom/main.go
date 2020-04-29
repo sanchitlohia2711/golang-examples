@@ -55,6 +55,7 @@ func (m *maxheap) swap(first, second int) {
 func (m *maxheap) upHeapify(index int) {
 	for m.heapArray[index] > m.heapArray[m.parent(index)] {
 		m.swap(index, m.parent(index))
+		index = m.parent(index)
 	}
 }
 
@@ -97,13 +98,6 @@ func (m *maxheap) remove() int {
 }
 
 func main() {
-	a := 3.14
-	b := 3.14
-	if a == b {
-		fmt.Println("same")
-	} else {
-		fmt.Println("Not")
-	}
 	inputArray := []int{6, 5, 3, 7, 2, 8}
 	maxHeap := newMaxHeap(len(inputArray))
 	for i := 0; i < len(inputArray); i++ {

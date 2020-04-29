@@ -9,6 +9,8 @@ func main() {
 	tUnixMilli := int64(time.Nanosecond) * time.Now().UnixNano() / int64(time.Millisecond)
 	fmt.Printf("timeMilli %d\n", tUnixMilli)
 
+	time.Parse
+
 	//Conversion to time.Time
 	tUnix := tUnixMilli / int64(time.Microsecond)
 	tUnixNanoRemainder := (tUnixMilli % int64(time.Microsecond)) * int64(time.Millisecond)

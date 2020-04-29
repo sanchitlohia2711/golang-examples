@@ -1,11 +1,16 @@
 package main
 
 import (
-	"github.com/golang-examples/articles/types/time/dob/ages"
+	"fmt"
+
+	"github.com/fatih/color"
 )
 
 func main() {
+	colorRed := "\033[31m"
+	colorReset := "\033[0m"
+	color.Cyan("print C")
 
-	ages.Find()
-
+	fmt.Println(string(colorRed), "test", string(colorReset))
+	fmt.Println("next")
 }

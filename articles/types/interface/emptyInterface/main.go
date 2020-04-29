@@ -4,7 +4,7 @@ import "fmt"
 
 func main() {
 
-	test("astring")
+	test("thisisstring")
 	test("10")
 	test(true)
 }

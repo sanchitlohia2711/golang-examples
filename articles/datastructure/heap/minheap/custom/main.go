@@ -55,6 +55,7 @@ func (m *minheap) swap(first, second int) {
 func (m *minheap) upHeapify(index int) {
 	for m.heapArray[index] < m.heapArray[m.parent(index)] {
 		m.swap(index, m.parent(index))
+		index = m.parent(index)
 	}
 }
 
@@ -97,34 +98,7 @@ func (m *minheap) remove() int {
 }
 
 func main() {
-	a := 3.14
-	b := 3.14
-	if a == b {
-		fmt.Println("same")
-	} else {
-		fmt.Println("Not")
-	}
-	a = 3.142
-	b = 3.14
-	if a == b {
-		fmt.Println("same")
-	} else {
-		fmt.Println("Not")
-	}
-
-	var c float32
-
-	var d float64
-
-	c = 3.14
-	d = 3.14
-	if c == d {
-		fmt.Println("same")
-	} else {
-		fmt.Println("Not")
-	}
-
-	inputArray := []int{6, 5, 3, 7, 2, 8}
+	inputArray := []int{6, 5, 3, 7, 2, 8, 9, 10, 45, 67, 89, 1009, 474, 345, 34, 23, 554646}
 	minHeap := newMinHeap(len(inputArray))
 	for i := 0; i < len(inputArray); i++ {
 		minHeap.insert(inputArray[i])

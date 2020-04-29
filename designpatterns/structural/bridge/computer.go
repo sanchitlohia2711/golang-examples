@@ -2,5 +2,5 @@ package main
 
 type computer interface {
 	print()
-	setPrinter()
+	setPrinter(printer)
 }

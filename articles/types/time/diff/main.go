@@ -21,5 +21,4 @@ func main() {
 
 	//In nanoseconds
 	fmt.Printf("Nanoseconds: %d\n", diff.Nanoseconds())
-
 }

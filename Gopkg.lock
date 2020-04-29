@@ -2,14 +2,6 @@
 
 
 [[projects]]
-  digest = "1:e9846ece10d1701db72a5add936bb9edc81353cdccb19be27078ca32f6c3f5d8"
-  name = "github.com/DataDog/datadog-go"
-  packages = ["statsd"]
-  pruneopts = ""
-  revision = "8a13fa761f51039f900738876f2837198fba804f"
-  version = "v2.2.0"
-
-[[projects]]
   digest = "1:439bfb51db599cd80766736b93b3d10e9314361197ada0b1209a51627a00ccd5"
   name = "github.com/PuerkitoBio/goquery"
   packages = ["."]
@@ -62,14 +54,6 @@
   version = "1.1.0"
 
 [[projects]]
-  branch = "master"
-  digest = "1:d6b876ce25f96e3a17e01ebab523965a4f8e49fee5641850b414ac1fd28e6569"
-  name = "github.com/bearbin/go-age"
-  packages = ["."]
-  pruneopts = ""
-  revision = "316d0c1e7cd1ecf68e4313ac739dc8a714f63934"
-
-[[projects]]
   digest = "1:141635a36d65611d06a05ec1d17be950e386426b6540169fe7c9476df41f6493"
   name = "github.com/cpuguy83/go-md2man"
   packages = ["md2man"]
@@ -84,6 +68,14 @@
   pruneopts = ""
   revision = "cbaa98ba5575e67703b32b4b19f73c91f3c4159e"
   version = "v1.7.1"
+
+[[projects]]
+  digest = "1:38c537dca3034658912a9ed95ae5d0d300a6a37cd04ca53143e056a5170a3c83"
+  name = "github.com/fatih/color"
+  packages = ["."]
+  pruneopts = ""
+  revision = "daf2830f2741ebb735b21709a520c5f37d642d85"
+  version = "v1.9.0"
 
 [[projects]]
   digest = "1:e35353e6b5c1a1350832f2f5ea87f1d42d491ce519bc6e2c65d5dd6d020e2a01"
@@ -244,6 +236,14 @@
   revision = "b2ccc519800e761ac8000b95e5d57c80a897ff9e"
 
 [[projects]]
+  digest = "1:eab986cd0513d271bb1fd9c9d12acd7eb4cfd57cb604122c65bd0914e4637619"
+  name = "github.com/mattn/go-colorable"
+  packages = ["."]
+  pruneopts = ""
+  revision = "68e95eba382c972aafde02ead2cd2426a8a92480"
+  version = "v0.1.6"
+
+[[projects]]
   digest = "1:dbfae9da5a674236b914e486086671145b37b5e3880a38da906665aede3c9eab"
   name = "github.com/mattn/go-isatty"
   packages = ["."]
@@ -283,6 +283,14 @@
   pruneopts = ""
   revision = "a5896473d0ec1fa36c8cae2ec1140428f212d8af"
   version = "v2.10.0"
+
+[[projects]]
+  digest = "1:a5484d4fa43127138ae6e7b2299a6a52ae006c7f803d98d717f60abf3e97192e"
+  name = "github.com/pborman/uuid"
+  packages = ["."]
+  pruneopts = ""
+  revision = "adf5a7427709b9deb95d29d3fa8a2bf9cfd388f1"
+  version = "v1.2"
 
 [[projects]]
   digest = "1:1d7e1867c49a6dd9856598ef7c3123604ea3daabf5b83f303ff457bcbc410b1d"
@@ -463,10 +471,9 @@
   analyzer-name = "dep"
   analyzer-version = 1
   input-imports = [
-    "github.com/DataDog/datadog-go/statsd",
     "github.com/afex/hystrix-go/hystrix",
-    "github.com/bearbin/go-age",
     "github.com/deckarep/golang-set",
+    "github.com/fatih/color",
     "github.com/gin-gonic/gin",
     "github.com/go-redis/redis",
     "github.com/go-sql-driver/mysql",
@@ -477,6 +484,7 @@
     "github.com/lestrrat/go-file-rotatelogs",
     "github.com/newrelic/go-agent",
     "github.com/newrelic/go-agent/_integrations/nrgin/v1",
+    "github.com/pborman/uuid",
     "github.com/rifflock/lfshook",
     "github.com/sirupsen/logrus",
     "github.com/tsenart/vegeta/lib",

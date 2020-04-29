@@ -25,5 +25,6 @@ func main() {
 	//time Since
 	fmt.Println(time.Since(now.Add(-time.Hour * 1)))
 
+	//time until
 	fmt.Println(time.Until(now.Add(time.Hour * 1)))
 }

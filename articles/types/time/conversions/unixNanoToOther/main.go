@@ -9,6 +9,7 @@ func main() {
 	tUnixNano := time.Now().UnixNano()
 	fmt.Printf("tUnixNano %d\n", tUnixNano)
 
+	//Conversion to time.Time
 	tUnix := tUnixNano / int64(time.Second)
 	tUnixNanoRemainder := (tUnixNano % int64(time.Second))
 	timeT := time.Unix(tUnix, tUnixNanoRemainder)
