@@ -12,5 +12,5 @@ func main() {
 	if err != nil {
 
 	}
-	fmt.Printf("Current Working Direcotry:  %s", newDir)
+	fmt.Printf("Current Working Direcotry: %s\n", newDir)
 }

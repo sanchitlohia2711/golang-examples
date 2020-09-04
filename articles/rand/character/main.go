@@ -26,5 +26,4 @@ func main() {
 		randomChar = 'a' + rune(rand.Intn(26))
 	}
 	fmt.Println(string(randomChar))
-
 }

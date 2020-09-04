@@ -12,5 +12,4 @@ func main() {
 		os.Exit(1)
 	}
 	fmt.Printf("Hostname: %s", hostname)
-
 }

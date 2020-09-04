@@ -20,8 +20,8 @@ func main() {
 	fmt.Println(string(colorYellow), "test")
 	fmt.Println(string(colorBlue), "test")
 	fmt.Println(string(colorPurple), "test")
-	fmt.Println(string(colorCyan), "test")
-	fmt.Println(string(colorWhite), "test", string(colorReset))
+	fmt.Println(string(colorWhite), "test")
+	fmt.Println(string(colorCyan), "test", string(colorReset))
 
 	fmt.Println("next")
 }

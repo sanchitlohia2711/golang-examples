@@ -11,7 +11,7 @@ func main() {
 	rand.Seed(time.Now().Unix())
 
 	//Only lowercase
-	charSet := []rune("abcdedfghijklmnopqrst")
+	charSet := []rune("abcdedfghijklmnopqrst£")
 
 	var output strings.Builder
 	length := 10
@@ -25,7 +25,7 @@ func main() {
 	output.Reset()
 
 	//Lowercase and Uppercase Both
-	charSet = []rune("abcdedfghijklmnopqrstABCDEFGHIJKLMNOP")
+	charSet = []rune("abcdedfghijklmnopqrstABCDEFGHIJKLMNOP£")
 	length = 20
 	for i := 0; i < length; i++ {
 		random := rand.Intn(len(charSet))

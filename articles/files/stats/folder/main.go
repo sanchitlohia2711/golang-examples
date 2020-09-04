@@ -13,7 +13,7 @@ func main() {
 		log.Fatal(err)
 	}
 
-	//Gets stats of the file
+	//Gets stats of the folder
 	stats, err := os.Stat("temp")
 	if err != nil {
 		log.Fatal(err)

@@ -17,5 +17,4 @@ func main() {
 
 	res = math.Mod(-5, 2)
 	fmt.Println(res)
-
 }
