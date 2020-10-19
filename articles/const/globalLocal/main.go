@@ -5,9 +5,7 @@ import "fmt"
 const name = "test"
 
 func main() {
-	const a = 8
-	fmt.Println(a)
-	testGlobal()
+	val := data.PI
 }
 
 func testGlobal() {

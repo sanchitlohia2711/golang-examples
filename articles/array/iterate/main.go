@@ -39,3 +39,7 @@ func main() {
 		fmt.Println(letters[i])
 	}
 }
+
+func t(s []string) {
+	gg := len(s)
+}

@@ -8,7 +8,8 @@ func main() {
 	//Typed String constant
 	const aa string = "abc"
 	var uu = aa
-	fmt.Printf("uu: Type: %T Value: %v\n", uu, uu)
+	fmt.Println("Untyped named string constant")
+	fmt.Printf("uu: Type: %T Value: %v\n\nn", uu, uu)
 
 	//Below line will raise a compilation error
 	//var v myString = aa
@@ -17,13 +18,14 @@ func main() {
 	const bb = "abc"
 	var ww myString = bb
 	var xx = bb
+	fmt.Println("Untyped named string constant")
 	fmt.Printf("ww: Type: %T Value: %v\n", ww, ww)
-	fmt.Printf("xx: Type: %T Value: %v\n", xx, xx)
+	fmt.Printf("xx: Type: %T Value: %v\n\n", xx, xx)
 
-	//Untyped unnamed sting constant
-	const cc = "abc"
-	var yy myString = cc
-	var zz = cc
+	//Untyped unnamed string constant
+	var yy myString = "abc"
+	var zz = "abc"
+	fmt.Println("Untyped unnamed string constant")
 	fmt.Printf("yy: Type: %T Value: %v\n", yy, yy)
 	fmt.Printf("zz: Type: %T Value: %v\n", zz, zz)
 

@@ -8,7 +8,8 @@ func main() {
 	//Typed character constant
 	const aa int32 = 'a'
 	var uu = aa
-	fmt.Printf("uu: Type: %T Value: %v\n", uu, uu)
+	fmt.Println("Untyped unnamed character constant")
+	fmt.Printf("uu: Type: %T Value: %v\n\n", uu, uu)
 
 	//Below line will raise a compilation error
 	//var vv myBool = aa
@@ -18,13 +19,14 @@ func main() {
 
 	var ww myChar = bb
 	var xx = bb
+	fmt.Println("Untyped named character constant")
 	fmt.Printf("ww: Type: %T Value: %v\n", ww, ww)
-	fmt.Printf("xx: Type: %T Value: %v\n", xx, xx)
+	fmt.Printf("xx: Type: %T Value: %v\n\n", xx, xx)
 
 	//Untyped unnamed character constant
-	const cc = 'a'
-	var yy myChar = cc
-	var zz = cc
+	var yy myChar = 'a'
+	var zz = 'a'
+	fmt.Println("Untyped unnamed character constant")
 	fmt.Printf("yy: Type: %T Value: %v\n", yy, yy)
 	fmt.Printf("zz: Type: %T Value: %v\n", zz, zz)
 }

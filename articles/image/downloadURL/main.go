@@ -1,6 +1,7 @@
 package main
 
 import (
+	"errors"
 	"fmt"
 	"io"
 	"log"
@@ -22,10 +23,13 @@ func downloadFile(URL, fileName string) error {
 	//Get the response bytes from the url
 	response, err := http.Get(URL)
 	if err != nil {
-
+		return err
 	}
 	defer response.Body.Close()
 
+	if response.StatusCode != 200 {
+		return errors.New("Received non 200 response code")
+	}
 	//Create a empty file
 	file, err := os.Create(fileName)
 	if err != nil {

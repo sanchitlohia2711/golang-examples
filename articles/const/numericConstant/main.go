@@ -6,7 +6,8 @@ func main() {
 	//Typed int constant
 	const aa int = 123
 	var uu = aa
-	fmt.Printf("uu: Type: %T Value: %v\n", uu, uu)
+	fmt.Println("Typed named integer constant")
+	fmt.Printf("uu: Type: %T Value: %v\n\n", uu, uu)
 
 	//Below line will raise a compilation error
 	//var v int32 = aa
@@ -17,17 +18,18 @@ func main() {
 	var xx int32 = bb
 	var yy float64 = bb
 	var zz complex128 = bb
+	fmt.Println("Untyped named integer constant")
 	fmt.Printf("ww: Type: %T Value: %v\n", ww, ww)
 	fmt.Printf("xx: Type: %T Value: %v\n", xx, xx)
 	fmt.Printf("yy: Type: %T Value: %v\n", yy, yy)
-	fmt.Printf("zz: Type: %T Value: %v\n", zz, zz)
+	fmt.Printf("zz: Type: %T Value: %v\n\n", zz, zz)
 
 	//Untyped unnamed int constant
-	const cc = 123
-	var ll = cc
-	var mm int32 = bb
-	var nn float64 = bb
-	var oo complex128 = bb
+	var ll = 123
+	var mm int32 = 123
+	var nn float64 = 123
+	var oo complex128 = 123
+	fmt.Println("Untyped unnamed integer constant")
 	fmt.Printf("ll: Type: %T Value: %v\n", ll, ll)
 	fmt.Printf("mm: Type: %T Value: %v\n", mm, mm)
 	fmt.Printf("nn: Type: %T Value: %v\n", nn, nn)
