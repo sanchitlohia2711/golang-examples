@@ -5,7 +5,7 @@ import "fmt"
 const (
 	a = iota
 	b = iota
-	c
+	c = iota
 )
 
 func main() {

@@ -6,15 +6,17 @@ import (
 
 func main() {
 
+	//Create the default mux
 	mux := http.NewServeMux()
 
-	//Handling the /v1/teachers
+	//Handling the /v1/teachers. The handler is a function here
 	mux.HandleFunc("/v1/teachers", teacherHandler)
 
-	//Handling the /v1/students
+	//Handling the /v1/students. The handler is a type implementing the Handler interface here
 	sHandler := studentHandler{}
 	mux.Handle("/v1/students", sHandler)
 
+	//Create the server. 
 	s := &http.Server{
 		Addr:    ":8080",
 		Handler: mux,

@@ -8,9 +8,6 @@ import (
 
 func main() {
 	_, err := os.Open("non-existing.txt")
-	if err != nil {
-		fmt.Println(err)
-	}
 
 	if err == os.ErrNotExist {
 		fmt.Println("Equality Operator: Both errors are equal")

@@ -12,5 +12,4 @@ func main() {
 	} else {
 		fmt.Println(file.Name() + "opened succesfully")
 	}
-
 }

@@ -18,9 +18,3 @@ func checkAndPrint(a []string, index int) {
 	}
 	fmt.Println(a[index])
 }
-
-func handleOutOfBounds() {
-	if r := recover(); r != nil {
-		fmt.Println("Recovering from panic:", r)
-	}
-}

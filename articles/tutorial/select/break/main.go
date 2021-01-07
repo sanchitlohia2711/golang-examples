@@ -7,8 +7,8 @@ func main() {
 	ch <- "Before break"
 
 	select {
-	case msg1 := <-ch:
-		fmt.Println(msg1)
+	case msg := <-ch:
+		fmt.Println(msg)
 		break
 		fmt.Println("After break")
 	default:

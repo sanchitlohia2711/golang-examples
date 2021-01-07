@@ -14,10 +14,3 @@ func main() {
 	fmt.Println("Finished")
 }
 
-func start() {
-	fmt.Println("In Goroutine")
-}
-
-func start2() {
-	fmt.Println("In Goroutine2")
-}

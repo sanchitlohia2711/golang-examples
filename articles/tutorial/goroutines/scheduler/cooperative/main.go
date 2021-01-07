@@ -2,21 +2,18 @@ package main
 
 import (
 	"fmt"
-	"runtime"
-	"sync"
+	"time"
 )
 
-func runForever(id int) {
+func forever(id int) {
 	fmt.Printf("id: %d\n", id)
 	for {
-		runtime.Gosched()
 	}
 }
 func main() {
-	var wg sync.WaitGroup
-	wg.Add(10000)
-	for i := 0; i < 10000; i++ {
-		go runForever(i)
+
+	for i := 0; i < 100; i++ {
+		go forever(i)
 	}
-	wg.Wait()
+	time.Sleep(time.Minute * 1)
 }

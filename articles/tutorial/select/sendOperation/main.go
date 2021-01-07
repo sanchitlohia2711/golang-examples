@@ -21,7 +21,7 @@ func main() {
 func goOne(ch chan string) {
 	msg := <-ch
 	fmt.Println(msg)
-}
+	
 
 func goTwo(ch chan string) {
 	msg := <-ch

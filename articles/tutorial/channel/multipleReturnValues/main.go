@@ -25,7 +25,6 @@ func sumAndMultiply(a, b int, resultChan chan result) {
 	sumValue := a + b
 	multiplyValue := a * b
 	res := result{sumValue: sumValue, multiplyValue: multiplyValue}
-	time.Sleep(time.Second * 2)
 	resultChan <- res
 	return
 }

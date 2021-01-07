@@ -11,5 +11,4 @@ func main() {
 	fmt.Println("Sending value to channnel complete")
 	val := <-ch
 	fmt.Printf("Receiving Value from channel finished. Value received: %d\n", val)
-	close(ch)
 }
