@@ -4,17 +4,26 @@ import "fmt"
 
 func main() {
 
-	pizza := &veggeMania{}
+	veggiePizza := &veggeMania{}
 
 	//Add cheese topping
-	pizzaWithCheese := &cheeseTopping{
-		pizza: pizza,
+	veggiePizzaWithCheese := &cheeseTopping{
+		pizza: veggiePizza,
 	}
 
 	//Add tomato topping
-	pizzaWithCheeseAndTomato := &tomatoTopping{
-		pizza: pizzaWithCheese,
+	veggiePizzaWithCheeseAndTomato := &tomatoTopping{
+		pizza: veggiePizzaWithCheese,
 	}
 
-	fmt.Printf("Price of veggeMania with tomato and cheese topping is %d\n", pizzaWithCheeseAndTomato.getPrice())
+	fmt.Printf("Price of veggieMania pizza with tomato and cheese topping is %d\n", veggiePizzaWithCheeseAndTomato.getPrice())
+
+	peppyPaneerPizza := &peppyPaneer{}
+
+	//Add cheese topping
+	peppyPaneerPizzaWithCheese := &cheeseTopping{
+		pizza: peppyPaneerPizza,
+	}
+
+	fmt.Printf("Price of peppyPaneer with tomato and cheese topping is %d\n", peppyPaneerPizzaWithCheese.getPrice())
 }
